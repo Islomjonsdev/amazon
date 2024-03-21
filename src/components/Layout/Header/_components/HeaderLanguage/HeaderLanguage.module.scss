@@ -1,0 +1,11 @@
+@import "../../../../../scss/variable.scss";
+
+.header__language {
+    margin-right: 5px;
+   select {
+    color: $white;
+    border: none;
+    background: none;
+    font-size: 14px;
+   }
+}

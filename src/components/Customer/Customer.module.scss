@@ -1,0 +1,9 @@
+@import "../../scss/variable.scss";
+
+.customer {
+  background-color: $white;
+  .customer__wrapper {
+      height: 40px;
+      border-bottom: 1px solid #dadada;
+  }
+}

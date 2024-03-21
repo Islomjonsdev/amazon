@@ -1,0 +1,67 @@
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  .carausel {
+    display: flex;
+    position: relative;
+    .carausel__wrapper {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      .carausel__img {
+        width: 1400px;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      .dots {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        top: 245px;
+        left: 45%;
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          transition: 0.3s ease;
+          background-color: #808080;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .carausel__btn {
+      position: absolute;
+      top: 30%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding-top: 100px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-bottom: 100px;
+      &:active {
+        border: 1px solid #076607;
+      }
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .carausel__btn[data-btn-type="left"] {
+      left: 0;
+    }
+
+    .carausel__btn[data-btn-type="right"] {
+      right: 0;
+    }
+  }
+}

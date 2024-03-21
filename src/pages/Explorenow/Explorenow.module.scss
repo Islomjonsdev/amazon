@@ -1,0 +1,106 @@
+@import "../../scss/variable.scss";
+
+.explorenow {
+  padding-top: 20px;
+  background-color: $white;
+  .container {
+    max-width: 1440px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .explorenow__wrapper {
+    display: flex;
+    gap: 30px;
+    .explorenow__left {
+      max-width: 221px;
+      width: 100%;
+      h3 {
+        color: #0f1111;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 32px;
+        margin-bottom: 10px;
+      }
+
+      .explorenow__left__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 5px;
+
+        input {
+          cursor: pointer;
+        }
+
+        label {
+          font-size: 14px;
+          color: #0f1111;
+          line-height: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .explorenow__right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .explorenow__item {
+        max-width: 250px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $white;
+        padding-top: 16px;
+        margin-bottom: 10px;
+        transition: 0.3s ease;
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 2px 2px 2px 1px #00000033;
+        }
+        a {
+          img {
+            width: 212px;
+            height: 226px;
+            object-fit: cover;
+            margin-bottom: 8px;
+          }
+
+          div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+
+            span {
+              background-color: #cc0c39;
+              font-size: 12px;
+              color: $white;
+              border-radius: 2px;
+              padding: 4px 6px;
+            }
+
+            p {
+              font-weight: 700;
+              line-height: 12px;
+              color: #cc0c39;
+            }
+          }
+
+          p {
+              color: #0f1111;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+              font-style: normal;
+          }
+        }
+      }
+    }
+  }
+}

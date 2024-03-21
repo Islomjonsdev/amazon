@@ -1,0 +1,62 @@
+@import "../../scss/variable.scss";
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  .product__cards {
+    position: relative;
+    height: 630px;
+    margin-bottom: 20px;
+    .product__cards__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: absolute;
+      top: -223px;
+      gap: 15px;
+      .product__cards__item {
+        max-width: 335px;
+        width: 100%;
+        background-color: $white;
+        padding: 20px 20px 15px 20px;
+        position: relative;
+        transition: 0.3s ease;
+        &:hover {
+          transform: scale(1.03);
+        }
+        h3 {
+          font-weight: 700;
+          font-size: 21px;
+          color: #0f1111;
+          margin-bottom: 10px;
+        }
+
+        a {
+          img {
+            width: 300px;
+            height: 305px;
+            object-fit: cover;
+            margin-bottom: 20px;
+          }
+
+          p {
+            position: absolute;
+            bottom: 10px;
+            color: #007185;
+            font-size: 11px;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+            &:hover {
+              border-bottom: 1px solid red;
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

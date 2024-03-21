@@ -1,0 +1,20 @@
+@import "../../scss/variable.scss";
+
+.back {
+    background-color: #37475a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+
+    a {
+        font-size: 13px;
+        color: $white;
+        line-height: 20px;
+    }
+}

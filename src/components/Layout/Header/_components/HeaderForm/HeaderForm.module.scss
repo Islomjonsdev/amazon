@@ -1,0 +1,51 @@
+@import "../../../../../scss/variable.scss";
+
+.header__form {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+    flex: 1;
+    background: $white;
+    overflow: hidden;
+    margin-right: 10px;
+
+    select, input, button {
+       height: 100%;
+       outline: none;
+       border: none;
+    }
+
+    select {
+        background: $darkGrey;
+        padding: 0px 0px 0px 5px;
+        min-width: 70px;
+        border-right: 1px solid $darkGrey;
+    }
+
+    input {
+        width: 100%;
+        padding: 0 5px;
+        font-size: 18px;
+        cursor: pointer;
+        &::placeholder {
+            font-size: 15px;
+            line-height: 15px;
+            color: grey;
+        }
+    }
+
+    button {
+        width: 45px;
+        cursor: pointer;
+        background-color: $darkOrange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

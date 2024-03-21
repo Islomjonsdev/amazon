@@ -1,0 +1,55 @@
+@import "../../../scss/variable.scss";
+
+.header__bottom {
+  background-color: $darkBlue;
+  padding: 0px 20px;
+  height: 40px;
+
+  .header__bottom__btn__blog {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    button {
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-weight: bold;
+      padding: 10px;
+      min-height: 40px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: 0.1s ease;
+      border-radius: 4px;
+
+      &:hover {
+        border: 1px solid $white;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: 0.1s ease;
+        border-radius: 4px;
+
+        &:hover {
+          border: 1px solid $white;
+        }
+
+        a {
+          font-size: 14px;
+          color: $white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

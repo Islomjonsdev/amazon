@@ -1,0 +1,122 @@
+@import "../../scss/variable.scss";
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  .deals {
+    background-color: $white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+
+    .deals__heading {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+
+      h3 {
+        color: #0f1111;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 32px;
+      }
+
+      a {
+        color: #007185;
+        font-size: 14px;
+        line-height: 35px;
+      }
+    }
+
+    .deals__main {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .deals__btn {
+        height: 100px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        background-color: $white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .deals__btn[data-btn-type="left"] {
+        left: 0;
+      }
+
+      .deals__btn[data-btn-type="right"] {
+        right: 0;
+      }
+      .deals__list {
+        display: flex;
+        overflow: hidden;
+        gap: 20px;
+
+        .deals__item {
+          padding: 5px 0px 5px 0px;
+          transition: 0.3s ease;
+          &:hover {
+            transform: scale(1.03);
+          }
+
+          .deals__link {
+            img {
+              width: 200px;
+              height: 200px;
+              object-fit: contain;
+              margin-bottom: 8px;
+            }
+
+            .deals__wrapper {
+              padding: 0px 10px;
+              div {
+                display: flex;
+                gap: 5px;
+                margin-bottom: 5px;
+
+                p {
+                  background-color: #cc0c39;
+                  color: $white;
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+
+                span {
+                  font-size: 12px;
+                  line-height: 16px;
+                  color: #cc0c39;
+                }
+              }
+
+              p {
+                font-size: 17px;
+                color: #0f1111;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 5px;
+              }
+
+              span {
+                line-height: 1.3em;
+                font-size: 13px;
+                color: #0f1111;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

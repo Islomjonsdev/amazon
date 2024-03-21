@@ -1,0 +1,123 @@
+@import "../../../scss/variable.scss";
+
+.customer__swipwer {
+  .container {
+    max-width: 1440px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    .customer__swipwer__wrapper {
+      padding: 10px;
+      .customer__swipwer__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        h3 {
+          color: #0f1111;
+          font-size: 21px;
+          font-weight: 700;
+          line-height: 32px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #0f1111;
+          line-height: 20px;
+        }
+      }
+
+      .customer__swipwer__main {
+        margin-bottom: 50px;
+        .customer__swiper {
+          .swiper-slide {
+            max-width: 160px;
+            width: 100%;
+          }
+  
+          img {
+            width: 160px;
+            height: 160px;
+            object-fit: contain;
+          }
+  
+          p {
+            color: $sky;
+            font-size: 14px;
+            white-space: normal;
+            letter-spacing: normal;
+            margin-bottom: 5px;
+          }
+  
+          span {
+            font-size: 17px;
+            color: #0f1111;
+            line-height: normal;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .customer__swiper__bottom {
+        &::before {
+          content: "";
+          display: inline-block;
+          border: 0.1px solid #DDD;;
+          width: 100%;
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          border: 0.1px solid #DDD;;
+          width: 100%;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          margin: 30px 30px;
+
+          p {
+            color: $black;
+            font-size: 13px;
+            line-height: 15px;
+            margin-bottom: 5px;
+          }
+
+          .customer__swiper__signin {
+            width: 230px;
+            height: 28px;
+            background-color: #fbbf27;
+            color: $black;
+            font-size: 12px;
+            line-height: 28px;
+            text-align: center;
+            font-weight: 700;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+            margin-bottom: 5px;
+            &:hover {
+              background-color: $white;
+              border: 1px solid #DDD;
+            }
+          }
+          span {
+            line-height: 15px;
+            color: $black;
+            font-size: 11px;
+          }
+
+          .customer__swiper__signup {
+            color: $sky;
+          }
+        }
+      }
+    }
+  }
+}
