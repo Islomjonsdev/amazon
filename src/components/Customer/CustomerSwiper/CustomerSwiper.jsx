@@ -30,7 +30,7 @@ const CustomerSwiper = ({ customerSwiper }) => {
               className="mySwiper"
             >
               {customerSwiper?.map((item, id) => (
-                <SwiperSlide className={style.customer__swiper}>
+                <SwiperSlide className={style.customer__swiper} key={item?.id}>
                   <Link className={style.customer__swiper__link}>
                     <img src={item?.image} alt="" />
                     <p>{item?.description.slice(0, 60)}</p>

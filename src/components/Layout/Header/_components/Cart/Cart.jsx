@@ -6,7 +6,7 @@ import style from "./Cart.module.scss"
 const Cart = () => {
   return (
     <div className={style.cart}>
-        <Link className={style.cart__link}>
+        <Link className={style.cart__link} to={"/addtocart"}>
             <BsCart />
             <b>Cart</b>
         </Link>

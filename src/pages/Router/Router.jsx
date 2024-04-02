@@ -7,6 +7,7 @@ import Home from "../../pages/Home/Home";
 import Signin from "../Signin/Signin";
 import Signup from "../Signup/Signup";
 import Pdp from "../Pdp/Pdp";
+import AddToCart from "../AddToCart/AddToCart";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/explorenow" element={<Explorenow />} />
+          <Route path="/addtocart" element={<AddToCart />}/>
           <Route path="/dealsId/:id" element={<DealsId />} />
           <Route path="/pdp/:id" element={<Pdp />}/>
         </Route>

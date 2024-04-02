@@ -2,11 +2,21 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import explorenowApi from "../../api/explorenow.json";
 import { v4 as uuidv4 } from "uuid";
-import style from "./Explorenow.module.scss";
+import { BsCart } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useDispatch} from "react-redux"
+import style from "./Explorenow.module.scss";
 
 const Explorenow = () => {
   const [productsExplore, setProductsExplore] = useState([]);
+  const dispacht = useDispatch()
+  const dispatchProducts = (data) => {
+    const action = {
+      type: "at_to_cart",
+      data: data
+    }
+    dispacht(action)
+  }
   useEffect(() => {
     axios
       .get("https://658efbfd2871a9866e7a1bb4.mockapi.io/work")
@@ -33,16 +43,20 @@ const Explorenow = () => {
           </div>
 
           <ul className={style.explorenow__right}>
-            {productsExplore?.map((products, id) => (
-              <li className={style.explorenow__item} key={products?.id}>
-                <Link to={`/pdp/${products?.id}`}>
-                  <img src={products?.image} alt="" />
+            {productsExplore?.map(({id, image, title}) => (
+              <li className={style.explorenow__item} key={id}>
+                <Link to={`/pdp/${id}`}>
+                  <img src={image} alt="" />
                   <div>
                     <span>Up to 60% off</span>
                     <p>With Prime</p>
                   </div>
-                  <p>{products?.title}</p>
+                  <p>{title}</p>
                 </Link>
+                <button onClick={() => dispatchProducts({id, image, title})}>
+                  <BsCart />
+                  Add to cart
+                </button>
               </li>
             ))}
           </ul>

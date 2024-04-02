@@ -52,16 +52,15 @@
       .explorenow__item {
         max-width: 250px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 20px;
         background-color: $white;
         padding-top: 16px;
         margin-bottom: 10px;
         transition: 0.3s ease;
+        border-radius: 8px;
         &:hover {
-            transform: scale(1.03);
-            box-shadow: 2px 2px 2px 1px #00000033;
+          transform: scale(1.03);
+          box-shadow: 2px 2px 2px 1px #00000033;
         }
         a {
           img {
@@ -93,12 +92,41 @@
           }
 
           p {
-              color: #0f1111;
-              font-size: 14px;
-              font-weight: 400;
-              line-height: 20px;
-              font-style: normal;
+            color: #0f1111;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            font-style: normal;
           }
+        }
+
+        button {
+            margin-top: 10px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+            width: 100%;
+            min-height: 40px;
+            background-color: $sky;
+            color: $white;
+            border-radius: 8px;
+            font-size: 15px;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+
+            &:hover {
+                border: 1px solid $sky;
+                background-color: $white;
+                color: $sky;
+            }
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
         }
       }
     }
