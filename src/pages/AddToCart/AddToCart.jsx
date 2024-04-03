@@ -58,7 +58,7 @@ const AddToCart = () => {
                   </div>
                   <div className={style.cart__remove__btn}>
                     <button onClick={dislike}>
-                      {like ? <CgHeart /> : <FaHeart color="red"/>}
+                      {like ? <FaHeart color="red"/> : <CgHeart />}
                     </button>
                     <button onClick={() => dispatch({
                       type: "remove_product",
