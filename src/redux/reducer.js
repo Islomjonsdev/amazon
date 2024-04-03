@@ -3,7 +3,6 @@ const initialCart = {
 };
 
 const cartReducer = (state = initialCart, action) => {
-    console.log(action);
   switch (action.type) {
     case "at_to_cart":
       return {

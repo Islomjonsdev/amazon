@@ -1,4 +1,5 @@
 .cart {
+  padding: 20px 0px 15px 0px;
   .container {
     max-width: 1440px;
     width: 100%;
@@ -7,41 +8,83 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .cart__container {
+  .cart__wrapper {
     .cart__header {
+      margin-bottom: 10px;
       h1 {
         text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #0f1111;
       }
     }
 
     .cart__body {
-      .cart__body__item {
-        display: flex;
-        justify-content: space-between;
-        .cart__body__left {
-          .cart__body__left__wrapper {
+      .cart__item {
+        .cart__left {
+          max-width: 900px;
+          width: 100%;
+          border: 1px solid rgb(194, 194, 194);
+          padding: 16px;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          .cart__left__blog {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 5px;
+            img {
+              width: 120px;
+              height: 120px;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+
+            a {
+              font-size: 16px;
+              color: #1f2026;
+              line-height: 1.5rem;
+              line-height: 1;
+            }
+
+            .cart__count__btn__wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              border-radius: 10px;
+              height: 40px;
+              margin-top: 10px;
+              border: 1px solid black;
+
+              button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background: none;
+                cursor: pointer;
+                outline: none;
+                font-size: 20px;
+              }
+            }
+          }
+
+          .cart__remove__btn {
             display: flex;
             align-items: center;
             gap: 10px;
-            img {
-              width: 100px;
-              height: 100px;
-              border-radius: 10px;
-            }
-            .cart__body__left__title {
-                h4 {
-                    margin-bottom: 10px;
-                }
-                .cart__body__left__btn {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                }
+            button {
+              display: flex;
+              justify-content: center;
+              border: none;
+              background: none;
+              cursor: pointer;
+              outline: none;
+              font-size: 20px;
             }
           }
-        }
-
-        .cart__body__right {
         }
       }
     }
