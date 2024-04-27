@@ -10,12 +10,12 @@ const Pdp = () => {
   useEffect(() => {
     axios(`https://658efbfd2871a9866e7a1bb4.mockapi.io/work/${id}`)
       .then((res) => {
-        setExploreNowId(res?.data);
+        setExploreNowId(res.data)
         console.log(res?.data);
       })
       .catch((err) => {
         console.log(err);
-      });
+      })
   }, []);
 
   return (

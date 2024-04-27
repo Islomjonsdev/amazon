@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import DealsId from "../DealsId/DealsId";
 import Explorenow from "../Explorenow/Explorenow";
@@ -8,6 +8,8 @@ import Signin from "../Signin/Signin";
 import Signup from "../Signup/Signup";
 import Pdp from "../Pdp/Pdp";
 import AddToCart from "../AddToCart/AddToCart";
+import CustomerId from "../CustomerId/CustomerId";
+import SellersId from "../SellersId/SellersId";
 
 const Router = () => {
   return (
@@ -21,6 +23,8 @@ const Router = () => {
           <Route path="/addtocart" element={<AddToCart />}/>
           <Route path="/dealsId/:id" element={<DealsId />} />
           <Route path="/pdp/:id" element={<Pdp />}/>
+          <Route path="/customer/:id" element={<CustomerId />}/>
+          <Route path="/sellers/:id" element={<SellersId />}/>
         </Route>
       </Routes>
     </div>

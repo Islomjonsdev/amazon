@@ -22,7 +22,7 @@ const Explorenow = () => {
       .get("https://658efbfd2871a9866e7a1bb4.mockapi.io/work")
       .then((res) => {
         setProductsExplore(res?.data);
-        console.log(res?.data);
+        console.log(res?.data, "data keldi");
       })
       .catch((err) => {
         console.log(err);

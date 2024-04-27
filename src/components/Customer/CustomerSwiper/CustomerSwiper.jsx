@@ -23,15 +23,11 @@ const CustomerSwiper = ({ customerSwiper }) => {
             <Swiper
               slidesPerView={7}
               spaceBetween={30}
-              // pagination={{
-              //   clickable: true,
-              // }}
-              // modules={[Pagination]}
               className="mySwiper"
             >
               {customerSwiper?.map((item, id) => (
                 <SwiperSlide className={style.customer__swiper} key={item?.id}>
-                  <Link className={style.customer__swiper__link}>
+                  <Link className={style.customer__swiper__link} to={`/customer/${item?.id}`}>
                     <img src={item?.image} alt="" />
                     <p>{item?.description.slice(0, 60)}</p>
                     <span>${item?.price}</span>

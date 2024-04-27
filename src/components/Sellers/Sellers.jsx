@@ -55,7 +55,7 @@ const Sellers = () => {
           <ul className={style.sellers__list} ref={elSwipe}>
             {getSellers?.map((item, id) => (
               <li className={style.sellers__item} key={item?.id}>
-                <Link>
+                <Link to={`/sellers/${item?.id}`}>
                   <img src={item?.image} alt="" />
                 </Link>
               </li>
