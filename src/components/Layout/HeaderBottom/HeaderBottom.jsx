@@ -9,7 +9,7 @@ const HeaderBottom = () => {
   return (
     <div className={style.header__bottom}>
       <div className={style.header__bottom__btn__blog}>
-        <button>
+        <button onClick={() => setModal(true)}>
           <GiHamburgerMenu />
           All
         </button>
