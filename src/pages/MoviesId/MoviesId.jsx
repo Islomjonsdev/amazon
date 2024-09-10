@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import moviesApi from "../../api/dummiy-data.movies.json";
-console.log(moviesApi);
 import style from "./MoviesId.module.scss";
 
 const MoviesId = () => {
@@ -9,7 +8,7 @@ const MoviesId = () => {
   const currentMoviesid = moviesApi.find((el) => el.id == id);
   console.log(currentMoviesid);
   return (
-    <div>
+    <div className={style.movies_id}>
       {currentMoviesid !== null && currentMoviesid ? (
         <div>
           <img src={currentMoviesid?.movies__link} alt="" />
