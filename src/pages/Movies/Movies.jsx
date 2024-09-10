@@ -44,9 +44,9 @@ const Movies = () => {
           </button>
 
           <ul className={style.movies__list} ref={elMoviesWrapper}>
-            {moviesApi?.map((item) => (
+            {moviesApi?.map((item, id) => (
               <li className={style.movies__item} key={uuidv4()}>
-                <Link>
+                <Link to={`/movies/${item?.id}`}>
                   <img src={item?.movies__link} alt="" />
                 </Link>
               </li>

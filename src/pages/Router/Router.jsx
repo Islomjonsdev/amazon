@@ -10,6 +10,7 @@ import Pdp from "../Pdp/Pdp";
 import AddToCart from "../AddToCart/AddToCart";
 import CustomerId from "../CustomerId/CustomerId";
 import SellersId from "../SellersId/SellersId";
+import MoviesId from "../MoviesId/MoviesId";
 
 const Router = () => {
   return (
@@ -25,6 +26,7 @@ const Router = () => {
           <Route path="/pdp/:id" element={<Pdp />}/>
           <Route path="/customer/:id" element={<CustomerId />}/>
           <Route path="/sellers/:id" element={<SellersId />}/>
+          <Route path="/movies/:id" element={<MoviesId />}/>
         </Route>
       </Routes>
     </div>
