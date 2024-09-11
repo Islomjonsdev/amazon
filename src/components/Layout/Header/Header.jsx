@@ -7,31 +7,39 @@ import HeaderForm from "./_components/HeaderForm/HeaderForm";
 import HeaderLanguage from "./_components/HeaderLanguage/HeaderLanguage";
 import HeaderSignIn from "./_components/HeaderSignIn/HeaderSignIn";
 import Cart from "./_components/Cart/Cart";
+import { useState } from "react";
+import Modal from "../../Modal/Modal";
 
 const Header = () => {
+  const [ openPopup, setOpenPopup ] = useState(false)
   return (
-    <header className={style.header}>
-      <Link className={style.logo__link} to="/">
-        <img className={style.header__logo} src={headerLogo} alt="" />
-      </Link>
+    <>
+      <header className={style.header}>
+        <Link className={style.logo__link} to="/">
+          <img className={style.header__logo} src={headerLogo} alt="" />
+        </Link>
 
-      <div className={style.header__delivery__address}>
-        <GrLocation />
-        <div className={style.delivery__wrapper}>
-          <p>Delivery to</p>
-          <b>Uzbekistan</b>
+        <div className={style.header__delivery__address} onClick={() => setOpenPopup(true)}>
+          <GrLocation />
+          <div className={style.delivery__wrapper}>
+            <p>Delivery to</p>
+            <b>Uzbekistan</b>
+          </div>
         </div>
-      </div>
-      <HeaderForm />
-      <HeaderLanguage />
-      <HeaderSignIn />
+        <HeaderForm />
+        <HeaderLanguage />
+        <HeaderSignIn />
 
-      <div className={style.header__return}>
-        <p>Return</p>
-        <b>&Orders</b>
-      </div>
-      <Cart />
-    </header>
+        <div className={style.header__return}>
+          <p>Return</p>
+          <b>&Orders</b>
+        </div>
+        <Cart />
+      </header>
+      {openPopup && (
+        <Modal close={setOpenPopup}>Popup</Modal>
+      )}
+    </>
   );
 };
 

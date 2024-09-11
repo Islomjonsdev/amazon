@@ -5,7 +5,7 @@ import Customer from "../../components/Customer/Customer";
 import Deals from "../../components/Deals/Deals";
 import Sellers from "../../components/Sellers/Sellers";
 import HeroBanner from "../HeroBanner/HeroBanner";
-import Movies from "../Movies/Movies";
+import Movies from "../../components/Movies/Movies";
 import ProductCards from "../ProductCards/ProductCards";
 
 const Home = () => {
