@@ -31,7 +31,7 @@ const Movies = () => {
       moviesCarausel * elMoviesWrapper.current.offsetWidth;
   }, [moviesCarausel]);
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <div className={style.movies}>
         <h3>Best Sellers in Books</h3>
         <div className={style.movies__wrapper}>
@@ -61,7 +61,7 @@ const Movies = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

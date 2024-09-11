@@ -42,7 +42,7 @@ const Deals = () => {
     elProductWrapper.current.scrollLeft = swipeProduct * elProductWrapper.current.offsetWidth
   }, [swipeProduct])
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <div className={style.deals}>
         <div className={style.deals__heading}>
           <h3>Exciting deals</h3>
@@ -75,7 +75,7 @@ const Deals = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

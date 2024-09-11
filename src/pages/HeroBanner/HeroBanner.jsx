@@ -30,7 +30,7 @@ const HeroBanner = () => {
   }, [currentImg]);
 
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <div className={style.carausel}>
         <button
           className={style.carausel__btn}
@@ -68,7 +68,7 @@ const HeroBanner = () => {
           <FcNext />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

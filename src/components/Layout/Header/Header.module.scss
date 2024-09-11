@@ -80,3 +80,20 @@
 .header > div:hover {
   border: 1px solid $white;
 }
+
+.header_location_popup {
+  background-color: $white;
+  box-shadow: 0 0 14px 0 rgba(15, 17, 17, .5);
+  width: 373px;
+  border-radius: 8px;
+  
+  .header_location_popup_header {
+    background-color: #f0f2f2;
+    height: 57px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+  }
+}

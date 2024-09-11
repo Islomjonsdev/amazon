@@ -5,7 +5,7 @@ import style from "./FooterTop.module.scss";
 
 const FooterTop = () => {
   return (
-    <div className={style.footer__top}>
+    <footer className={style.footer__top}>
       <ul className={style.footer__top__wrapper}>
         <li className={style.footer__top__item}>
           <h3>Get to Know Us</h3>
@@ -108,7 +108,7 @@ const FooterTop = () => {
         </li>
       </ul>
       <FooterMain />
-    </div>
+    </footer>
   );
 };
 

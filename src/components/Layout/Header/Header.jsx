@@ -8,10 +8,11 @@ import HeaderLanguage from "./_components/HeaderLanguage/HeaderLanguage";
 import HeaderSignIn from "./_components/HeaderSignIn/HeaderSignIn";
 import Cart from "./_components/Cart/Cart";
 import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
 import Modal from "../../Modal/Modal";
 
 const Header = () => {
-  const [ openPopup, setOpenPopup ] = useState(false)
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <>
       <header className={style.header}>
@@ -19,7 +20,10 @@ const Header = () => {
           <img className={style.header__logo} src={headerLogo} alt="" />
         </Link>
 
-        <div className={style.header__delivery__address} onClick={() => setOpenPopup(true)}>
+        <div
+          className={style.header__delivery__address}
+          onClick={() => setOpenPopup(true)}
+        >
           <GrLocation />
           <div className={style.delivery__wrapper}>
             <p>Delivery to</p>
@@ -37,7 +41,15 @@ const Header = () => {
         <Cart />
       </header>
       {openPopup && (
-        <Modal close={setOpenPopup}>Popup</Modal>
+        <Modal close={setOpenPopup}>
+          <div className={style.header_location_popup}>
+            <div className={style.header_location_popup_header}>
+              <h3>Choose your location</h3>
+              <IoMdClose onClick={() => setOpenPopup(false)}/>
+            </div>
+            Location
+          </div>
+        </Modal>
       )}
     </>
   );

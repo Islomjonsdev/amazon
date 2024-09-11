@@ -4,10 +4,10 @@ import CustomerSwiper from "./CustomerSwiper/CustomerSwiper";
 
 const Customer = ({ products }) => {
   return (
-    <div className={style.customer}>
+    <section className={style.customer}>
       <div className={style.customer__wrapper}></div>
       <CustomerSwiper customerSwiper={products} />
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import style from "./ProductCards.module.scss";
 
 const ProductCards = () => {
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <div className={style.product__cards}>
         <ul className={style.product__cards__list}>
           {data?.map((item) => (
@@ -21,7 +21,7 @@ const ProductCards = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

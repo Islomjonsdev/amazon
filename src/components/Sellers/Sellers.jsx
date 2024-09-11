@@ -41,7 +41,7 @@ const Sellers = () => {
       });
   }, []);
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <div className={style.sellers}>
         <h3>Top Sellers in Books for you</h3>
         <div className={style.sellers__wrapper}>
@@ -70,7 +70,7 @@ const Sellers = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

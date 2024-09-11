@@ -7,7 +7,7 @@ import style from "./Cards.module.scss";
 
 const Cards = () => {
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <div className={style.cards}>
         <ul className={style.cards__list}>
           {cardsApi?.map((item) => (
@@ -21,7 +21,7 @@ const Cards = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 
