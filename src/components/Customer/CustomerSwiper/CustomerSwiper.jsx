@@ -7,7 +7,6 @@ import style from "./CustomerSwiper.module.scss";
 import { Link } from "react-router-dom";
 
 const CustomerSwiper = ({ customerSwiper }) => {
-  console.log(customerSwiper);
   return (
     <div className={style.customer__swipwer}>
       <div className={style.container}>

@@ -26,6 +26,7 @@ const Pdp = () => {
             <div className={style.pdp__blog}>
               <h2>{exploreNowId?.title}</h2>
               <img src={exploreNowId?.image} alt="" />
+              <span>{exploreNowId.price}</span>
             </div>
           ) : (
             <></>

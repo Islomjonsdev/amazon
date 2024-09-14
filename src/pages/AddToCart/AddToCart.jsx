@@ -21,8 +21,8 @@ const AddToCart = () => {
           </div>
 
           <div className={style.cart__body}>
-            {accept?.cart?.cart?.map((item) => (
-              <div className={style.cart__item}>
+            {accept?.cart?.cart?.map((item, index) => (
+              <div className={style.cart__item} key={index}>
                 <div className={style.cart__left}>
                   <div className={style.cart__left__blog}>
                     <img src={item?.image} alt="" />

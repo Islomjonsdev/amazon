@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import cardsApi from "../../api/cards.json";
 import { v4 as uuidv4 } from "uuid";
-import Sellers from "../Sellers/Sellers";
 import style from "./Cards.module.scss";
 
 const Cards = () => {
