@@ -2,25 +2,22 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { CgMathPlus, CgMathMinus, CgHeart, CgTrash } from "react-icons/cg";
 import { FaHeart } from "react-icons/fa";
+import cartImg from "../../assets/images/cart.png";
 import style from "./AddToCart.module.scss";
 import { Link } from "react-router-dom";
 
 const AddToCart = () => {
-  // Local state for cart items
   const [cartItems, setCartItems] = useState([]);
   const [like, setLike] = useState(false);
   const dispatch = useDispatch();
 
-  // Function to toggle the like status
   const dislike = (id) => setLike((prev) => !prev);
 
-  // Load cart data from localStorage when the component mounts
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCartItems(storedCart);
   }, []);
 
-  // Update localStorage when cart items change (e.g., remove or increment)
   const updateCartInLocalStorage = (updatedCart) => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     setCartItems(updatedCart);
@@ -34,7 +31,9 @@ const AddToCart = () => {
 
   const incrementProduct = (item) => {
     const updatedCart = cartItems.map((cartItem) =>
-      cartItem.id === item.id ? { ...cartItem, count: cartItem.count + 1 } : cartItem
+      cartItem.id === item.id
+        ? { ...cartItem, count: cartItem.count + 1 }
+        : cartItem
     );
     updateCartInLocalStorage(updatedCart);
     dispatch({ type: "increment", data: item });
@@ -61,7 +60,11 @@ const AddToCart = () => {
       <div className={style.container}>
         <div className={style.cart__wrapper}>
           <div className={style.cart__header}>
-            <h1>Savatcha</h1>
+            {cartItems.length > 0 ? (
+              <h1>Savatcha</h1>
+            ) : (
+              <img src={cartImg} alt="" />
+            )}
           </div>
 
           <div className={style.cart__body}>
