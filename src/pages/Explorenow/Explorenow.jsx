@@ -11,6 +11,10 @@ const Explorenow = () => {
   const [productsExplore, setProductsExplore] = useState([]);
   const dispacht = useDispatch();
   const dispatchProducts = (data) => {
+    const getToLocalStorate = JSON.parse(localStorage.getItem("cart")) || []
+    const updatedCards = [...getToLocalStorate, data]
+
+    localStorage.setItem("cart", JSON.stringify(updatedCards))
     const action = {
       type: "at_to_cart",
       data: data,

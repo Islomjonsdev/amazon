@@ -1,6 +1,7 @@
 @import "../../../../../scss/variable.scss";
 
 .cart {
+  position: relative;
   .cart__link {
       color: $white;
     svg {
@@ -14,5 +15,19 @@
         font-weight: 700;
         padding-bottom: 5px;
     }
+  }
+
+  span {
+    color: $black;
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+    left: 27px;
   }
 }

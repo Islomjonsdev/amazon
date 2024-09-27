@@ -13,6 +13,7 @@ import Modal from "../../Modal/Modal";
 
 const Header = () => {
   const [openPopup, setOpenPopup] = useState(false);
+
   return (
     <>
       <header className={style.header}>
