@@ -66,7 +66,7 @@ const AddToCart = () => {
           <div className={style.cart__header}>
             {cartItems?.length > 0 ? (
               <h1>Savatcha</h1>
-              ) : (
+            ) : (
               <img src={cartImage} alt="" />
             )}
           </div>

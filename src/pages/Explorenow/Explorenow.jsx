@@ -6,15 +6,17 @@ import { BsCart } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import style from "./Explorenow.module.scss";
+import Loading from "../../components/Loading/Loading";
 
 const Explorenow = () => {
   const [productsExplore, setProductsExplore] = useState([]);
+  const [loading, setLoading] = useState(false);
   const dispacht = useDispatch();
   const dispatchProducts = (data) => {
-    const getToLocalStorate = JSON.parse(localStorage.getItem("cart")) || []
-    const updatedCards = [...getToLocalStorate, data]
+    const getToLocalStorate = JSON.parse(localStorage.getItem("cart")) || [];
+    const updatedCards = [...getToLocalStorate, data];
 
-    localStorage.setItem("cart", JSON.stringify(updatedCards))
+    localStorage.setItem("cart", JSON.stringify(updatedCards));
     const action = {
       type: "at_to_cart",
       data: data,
@@ -22,15 +24,22 @@ const Explorenow = () => {
     dispacht(action);
   };
   useEffect(() => {
+    setLoading(true);
     axios
       .get("https://658efbfd2871a9866e7a1bb4.mockapi.io/work")
       .then((res) => {
         setProductsExplore(res?.data);
+        console.log(res?.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <div className={style.explorenow}>
       <div className={style.container}>
