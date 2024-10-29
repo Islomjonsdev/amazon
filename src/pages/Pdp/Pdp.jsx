@@ -6,25 +6,25 @@ import style from "./Pdp.module.scss";
 
 const Pdp = () => {
   const { id } = useParams();
-  const [ loading, setLoading ] = useState(false)
+  const [loading, setLoading] = useState(false);
   const [exploreNowId, setExploreNowId] = useState(null);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     axios(`https://658efbfd2871a9866e7a1bb4.mockapi.io/work/${id}`)
       .then((res) => {
-        setExploreNowId(res.data)
+        setExploreNowId(res.data);
         console.log(res?.data);
-        setLoading(false)
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        setLoading(true)
-      })
+        setLoading(true);
+      });
   }, []);
 
   if (loading) {
-    return <Loading />
+    return <Loading />;
   }
 
   return (
