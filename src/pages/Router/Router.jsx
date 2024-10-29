@@ -1,5 +1,4 @@
-import React from "react";
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import DealsId from "../DealsId/DealsId";
 import Explorenow from "../Explorenow/Explorenow";
