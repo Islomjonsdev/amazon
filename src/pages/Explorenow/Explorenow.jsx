@@ -58,7 +58,7 @@ const Explorenow = () => {
             {productsExplore?.map(({ id, image, title }) => (
               <li className={style.explorenow__item} key={id}>
                 <Link to={`/pdp/${id}`}>
-                  <img src={image} alt="" />
+                  <img src={image} alt="image" />
                   <div>
                     <span>Up to 60% off</span>
                     <p>With Prime</p>

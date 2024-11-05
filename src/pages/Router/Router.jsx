@@ -28,7 +28,7 @@ const Router = () => {
           <Route path="/sellers/:id" element={<SellersId />} />
           <Route path="/movies/:id" element={<MoviesId />} />
         </Route>
-        <Route path="*" element={<Notfound />}/>
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
   );
