@@ -33,9 +33,13 @@ const Pdp = () => {
         <div className={style.pdp__wrapper}>
           {exploreNowId !== null && exploreNowId ? (
             <div className={style.pdp__blog}>
-              <h2>{exploreNowId?.title}</h2>
-              <img src={exploreNowId?.image} alt="" />
-              <span>{exploreNowId.price}</span>
+              <div className={style.pdp_left}>
+                <img src={exploreNowId?.image} alt="" />
+              </div>
+              <div className={style.pdp_right}>
+                  <h4>{exploreNowId?.description}</h4>
+                  <p>{exploreNowId?.title}</p>
+              </div>
             </div>
           ) : (
             <></>
