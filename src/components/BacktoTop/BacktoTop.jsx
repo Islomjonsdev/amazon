@@ -13,6 +13,7 @@ const BacktoTop = () => {
   useEffect(() => {
       window.scrollTo(0, 0)
   }, [pathname])
+  
   return (
     <div className={style.back} onClick={scrollTop}>
       <Link>Back to top</Link>
