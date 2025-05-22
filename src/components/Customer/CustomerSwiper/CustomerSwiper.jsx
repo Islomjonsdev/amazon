@@ -19,14 +19,13 @@ const CustomerSwiper = ({ customerSwiper }) => {
           </div>
 
           <div className={style.customer__swipwer__main}>
-            <Swiper
-              slidesPerView={7}
-              spaceBetween={30}
-              className="mySwiper"
-            >
+            <Swiper slidesPerView={7} spaceBetween={30} className="mySwiper">
               {customerSwiper?.map((item, id) => (
                 <SwiperSlide className={style.customer__swiper} key={item?.id}>
-                  <Link className={style.customer__swiper__link} to={`/customer/${item?.id}`}>
+                  <Link
+                    className={style.customer__swiper__link}
+                    to={`/customer/${item?.id}`}
+                  >
                     <img src={item?.image} alt="" />
                     <p>{item?.description.slice(0, 60)}</p>
                     <span>${item?.price}</span>
@@ -39,9 +38,14 @@ const CustomerSwiper = ({ customerSwiper }) => {
           <div className={style.customer__swiper__bottom}>
             <div>
               <p>See personalized recommendations</p>
-              <Link className={style.customer__swiper__signin} to={"/signin"}>Sign in</Link>
+              <Link className={style.customer__swiper__signin} to={"/signin"}>
+                Sign in
+              </Link>
               <span>
-                New customer? <Link className={style.customer__swiper__signup} to={"/signup"}>Start here</Link>
+                New customer?{" "}
+                <Link className={style.customer__swiper__signup} to={"/signup"}>
+                  Start here
+                </Link>
               </span>
             </div>
           </div>
